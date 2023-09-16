@@ -32,12 +32,12 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Rename jar
-        run: mv target/secret-replacer-*.jar secret-replacer-${{ github.event.inputs.version_number }}.jar
+        run: mv target/secret-replacer-*.jar secret-replacer.jar
       - name: Upload jar
         uses: actions/upload-artifact@v3
         with:
           name: jar
-          path: secret-replacer-${{ github.event.inputs.version_number }}.jar
+          path: secret-replacer.jar
           if-no-files-found: error
   create_release:
     name: Create Release
