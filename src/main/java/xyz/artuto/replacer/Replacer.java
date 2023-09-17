@@ -25,14 +25,14 @@
 package xyz.artuto.replacer;
 
 import io.github.cdimascio.dotenv.Dotenv;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static xyz.artuto.replacer.Processor.LOGGER;
 
 public class Replacer
 {
@@ -81,6 +81,5 @@ public class Replacer
     {
     }
 
-    private static final Logger LOGGER = LogManager.getRootLogger();
     private static final Pattern VAR_PATTERN = Pattern.compile("\\$\\{([^}]+)}");
 }

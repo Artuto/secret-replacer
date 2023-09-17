@@ -104,5 +104,5 @@ public class Processor implements Runnable
         }
     }
 
-    private static final Logger LOGGER = LogManager.getRootLogger();
+    public static final Logger LOGGER = LogManager.getLogger(Processor.class);
 }
