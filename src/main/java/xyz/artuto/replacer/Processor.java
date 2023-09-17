@@ -38,7 +38,7 @@ import java.util.stream.Stream;
 @CommandLine.Command(name = "Replace")
 public class Processor implements Runnable
 {
-    @CommandLine.Parameters
+    @CommandLine.Parameters(defaultValue = ".")
     List<Path> directories;
 
     @CommandLine.ArgGroup(exclusive = false)
