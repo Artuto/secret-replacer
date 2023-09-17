@@ -47,7 +47,7 @@ public class Processor implements Runnable
     @Override
     public void run()
     {
-        Dotenv envSource = Dotenv.configure().load();
+        Dotenv envSource = Dotenv.configure().ignoreIfMissing().load();
         Replacer replacer = new Replacer(envSource, options.prefix);
 
         for(Path path : directories)
